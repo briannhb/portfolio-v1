@@ -1,18 +1,15 @@
 "use client"
 
-import AboutCard from "@/components/AboutCard"
 import TopBar from "@/components/TopBar"
-import { Variants, motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 import { Analytics } from "@vercel/analytics/react"
-import Image from "next/image"
 
 export default function Home() {
     return (
         <div className="w-full px-4">
-            <Analytics/>
+            <Analytics />
             <TopBar />
-            <div className="mt-6 md:mt-12">
+            <div id="main" className="mt-6 md:mt-12 mb-12 md:mb-48">
                 <h3 className="relative overflow-hidden sub-title">
                     <motion.span
                         initial={{ y: 130 }}
@@ -27,28 +24,28 @@ export default function Home() {
                     <div>
                         <h1 className="relative overflow-hidden">
                             <motion.span
-                                initial={{ y: 130 }}
+                                initial={{ y: 300 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     duration: 2,
                                     delay: 1,
                                     ease: "anticipate"
                                 }}
-                                className="title"
+                                className="title text-6xl"
                             >
                                 I Create Stories,
                             </motion.span>
                         </h1>
                         <h1 className="relative overflow-hidden pb-3">
                             <motion.span
-                                initial={{ y: 130 }}
+                                initial={{ y: 300 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     duration: 2,
                                     delay: 1,
                                     ease: "anticipate"
                                 }}
-                                className="title"
+                                className="title text-6xl"
                             >
                                 Design and Code.
                             </motion.span>
@@ -64,7 +61,7 @@ export default function Home() {
                             duration: 1,
                             delay: 1
                         }}
-                        className="mt-auto flex flex-col items-center"
+                        className="mt-auto hidden md:flex flex-col items-center"
                     >
                         <svg
                             width="46"
@@ -129,7 +126,71 @@ export default function Home() {
                     </motion.div>
                 </h1>
             </div>
-            <section id="about"></section>
+            <section id="about">
+                <h3 className="font-bold md:text-6xl sm:text-4xl text-2xl relative overflow-hidden md:text-left text-center underline md:no-underline">
+                    <motion.span
+                        initial={{ opacity: 0, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: 'anticipate' }}
+                        className="block"
+                    >
+                        About Myself
+                    </motion.span>
+                </h3>
+                <div className="md:mt-8 mt-4 flex gap-8 items-center md:text-left text-center md:justify-normal justify-center">
+                    <motion.div
+                        style={{
+                            width: "5px",
+                            height: "100px",
+                            borderRadius: "5px",
+                            backgroundColor: "#253745"
+                        }}
+                        initial={{ scaleY: 0 }}
+                        whileInView={{
+                            scaleY: [0, 1, 0],
+                            y: ["-50px", "0px", "50px"]
+                        }}
+                        transition={{
+                            duration: 1,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut"
+                        }}
+                        className="hidden md:flex"
+                    />
+                    <h4>
+                        <motion.p
+                            initial={{ opacity: 0, x: 60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7 }}
+                            viewport={{ once: true }}
+                            className="font-medium md:text-4xl sm:text-2xl text-md"
+                        >
+                            Fueled by a relentless curiosity.
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ opacity: 0, x: 60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.1, duration: 0.7 }}
+                            viewport={{ once: true }}
+                            className="font-medium md:text-4xl sm:text-2xl text-md md:mt-4 mt-1"
+                        >
+                            Driven by a passion to make a meaningful impact.
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ opacity: 0, x: 60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.2, duration: 0.7 }}
+                            viewport={{ once: true }}
+                            className="font-medium md:text-4xl sm:text-2xl text-md md:mt-4 mt-1"
+                        >
+                            Determined to leave my legacy for the world.
+                        </motion.p>
+                    </h4>
+                </div>
+            </section>
         </div>
     )
 }
