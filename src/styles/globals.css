@@ -5,6 +5,7 @@
 :root {
     --color-primary: #253745;
     --color-secondary: #9ba8ab;
+    --color-primary-do: #5E6A6C;
     --main-background: #eeeeee;
 }
 
@@ -30,10 +31,15 @@
 }
 
 body {
-    padding: 0 4rem 0 4rem;
     color: var(--color-primary);
-    background-color: var(--main-background);
-    max-width: 1800px;
+    margin: 0;;
+    /* background-color: var(--main-background); */
+    background: url('../resources/texture_bg.png');
+}
+
+.wrapper{
+    padding: 0 4rem 0 4rem;
+    max-width: 1960px;
     margin: auto;
 }
 

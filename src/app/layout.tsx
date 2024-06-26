@@ -30,7 +30,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={poppins.className}>
-                <main className="flex min-h-screen flex-col items-center justify-between py-12">
+                <main className="flex min-h-screen flex-col items-center justify-between pt-12">
                     {children}
                 </main>
             </body>

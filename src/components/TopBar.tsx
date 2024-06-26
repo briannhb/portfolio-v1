@@ -43,6 +43,7 @@ export default function TopBar() {
                     transition={{ duration: 0.3 }}
                 >
                     <Image
+                        priority
                         src={"/icon.svg"}
                         width={30}
                         height={30}
@@ -119,6 +120,7 @@ export default function TopBar() {
             >
                 <Link href="/">
                     <Image
+                        priority
                         src={"/icon.svg"}
                         width={40}
                         height={40}
