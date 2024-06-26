@@ -5,25 +5,13 @@
 :root {
     --color-primary: #253745;
     --color-secondary: #9ba8ab;
+    --color-primary-do: #5E6A6C;
     --main-background: #eeeeee;
 }
 
 /* * {
     cursor: none;
 } */
-
-body {
-    padding: 0 4rem 0 4rem;
-    color: var(--color-primary);
-    background-color: var(--main-background);
-}
-
-@media screen and (max-width: 992px) {
-    body {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
 
 .sub-title {
     font-weight: 500;
@@ -35,7 +23,39 @@ body {
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.025em;
-    font-size: 7vw;
-    white-space: nowrap;
+    font-size: 8vw;
+    /* font-size: 114px; */
+    /* white-space: nowrap; */
     display: block;
+    padding-right: 10px;
+}
+
+body {
+    color: var(--color-primary);
+    margin: 0;;
+    /* background-color: var(--main-background); */
+    background: url('../resources/texture_bg.png');
+}
+
+.wrapper{
+    padding: 0 4rem 0 4rem;
+    max-width: 1960px;
+    margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .title {
+    font-size: 9vw;
+    }
+
+    .sub-title {
+    font-size: 24px;
+    }
 }
