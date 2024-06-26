@@ -237,7 +237,7 @@ export default function Home() {
                     <div className="gap-4 grid grid-cols-2 wrapper text-primary-do">
                         <div>
                             <h1 className="font-bold text-6xl">
-                                // What Can I Do
+                                &#47;&#47; What Can I Do
                             </h1>
                             <p className="text-xl mt-8 tracking-wide">
                                 Lorem, ipsum dolor sit amet consectetur
